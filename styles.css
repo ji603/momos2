@@ -131,11 +131,14 @@ nav {
     transition: 0.3s;
 }
 
-/* Hero Section */
+/* Hero Section 
+this was the earlier link of hero section image-------- https://img.freepik.com/free-photo/view-delicious-dumplings_23-2150777769.jpg
+https://drive.google.com/file/d/1xuRGrMv9j38ASlN5rLMwVXjhzkOvpyAT/view?usp=drive_link
+*/
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                url('https://img.freepik.com/free-photo/view-delicious-dumplings_23-2150777769.jpg') no-repeat center center/cover;
+                url('/one.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
