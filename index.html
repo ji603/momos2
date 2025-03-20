@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Deccan Dosa</title>
+</head>
+
+<!-- this is the url of logo -->
+<!-- https://img.freepik.com/premium-vector/indian-food-logo-template-design-vector-emblem-design-concept-creative-symbol-icon_316488-1400.jpg -->
+
+<body>
+    <header class="sticky-header">
+        <nav>
+            <div class="logo">
+                <!-- Original logo image commented out -->
+                <!-- <img src="logo.png" alt="Deccan Dosa Logo"> -->
+                <!-- Replace with a high-quality logo image from the internet -->
+                <img src="data:image/jpeg;base64,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" alt="Deccan Dosa Logo">
+                <span>Deccan Dosa</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="booking.html" class="reservation-btn">Book a Table</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero parallax">
+        <div class="hero-content">
+            <h1 class="animate-text">Welcome to Deccan Dosa</h1>
+            <p class="animate-text">Experience the authentic flavors of South India</p>
+            <div class="cta-buttons">
+                <a href="#menu" class="cta-button primary">View Menu</a>
+                <a href="booking.html" class="cta-button secondary">Book a Table</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2>Our Signature Dishes</h2>
+        <div class="menu-categories">
+            <button class="menu-category active" data-category="all">All</button>
+            <button class="menu-category" data-category="idlis">Idlis</button>
+            <button class="menu-category" data-category="dosas">Dosas</button>
+            <button class="menu-category" data-category="bhajji">Mysore Bhajji</button>
+            <button class="menu-category" data-category="beverages">Beverages</button>
+            <button class="menu-category" data-category="mocktails">Mocktails</button>
+        </div>
+        <div class="menu-items">
+            <!-- Idlis Section -->
+            <div class="menu-item" data-category="idlis">
+                <img src="https://st2.depositphotos.com/5653638/11789/i/950/depositphotos_117892824-stock-photo-idly-with-sambar-iddli-is.jpg" alt="Idli">
+                <div class="menu-item-content">
+                    <h3>Idli</h3>
+                    <p>Soft and fluffy steamed rice cakes</p>
+                    <span class="price">RS 50</span>
+                </div>
+            </div>
+            
+            <!-- <div class="menu-item" data-category="idlis">
+                <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/02/sambar-idli.jpg" alt="Sambar Idli">
+                <div class="menu-item-content">
+                    <h3>Sambar Idli</h3>
+                    <p>Idli served with flavorful sambar</p>
+                    <span class="price">RS 80</span>
+                </div>
+            </div> -->
+            
+            <div class="menu-item" data-category="idlis">
+                <img src="https://img-global.cpcdn.com/recipes/e2a322a17669a617/680x482cq70/butter-idli-recipe-main-photo.jpg" alt="Butter Idli">
+                <div class="menu-item-content">
+                    <h3>Butter Idli</h3>
+                    <p>Idli topped with melted butter</p>
+                    <span class="price">RS 100</span>
+                </div>
+            </div>
+            
+            <!-- <div class="menu-item" data-category="idlis">
+                <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/ghee-idli.jpg" alt="Ghee Idli">
+                <div class="menu-item-content">
+                    <h3>Ghee Idli</h3>
+                    <p>Idli drizzled with pure ghee</p>
+                    <span class="price">RS 100</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="idlis">
+                <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/tawa-idli-recipe.jpg" alt="Tawa Idli">
+                <div class="menu-item-content">
+                    <h3>Tawa Idli</h3>
+                    <p>Idli pan-fried on a tawa with spices</p>
+                    <span class="price">RS 120</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="idlis">
+                <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/cheese-idli.jpg" alt="Tawa Cheese Idli">
+                <div class="menu-item-content">
+                    <h3>Tawa Cheese Idli</h3>
+                    <p>Tawa idli topped with melted cheese</p>
+                    <span class="price">RS 150</span>
+                </div>
+            </div> -->
+            
+            <!-- <div class="menu-item" data-category="idlis">
+                <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/garlic-idli.jpg" alt="Cheese Garlic Idli">
+                <div class="menu-item-content">
+                    <h3>Cheese Garlic Idli</h3>
+                    <p>Idli with cheese and garlic flavor</p>
+                    <span class="price">RS 150</span>
+                </div>
+            </div> -->
+            
+            <!-- Dosas Section -->
+            <div class="menu-item" data-category="dosas">
+                <img src="https://media.istockphoto.com/id/909906350/photo/masala-dosa-south-indian-food.jpg?s=612x612&w=0&k=20&c=3CI-bw2NhYaX_t0-CZIXIIXsOygFcUaoGSmzbnVB-fU=" alt="Plain Dosa">
+                <div class="menu-item-content">
+                    <h3>Plain Dosa</h3>
+                    <p>Thin crispy rice crepe</p>
+                    <span class="price">RS 50</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://www.happytimemeals.com/upload/product/6662f296471eb.jpg" alt="Jain Plain Dosa">
+                <div class="menu-item-content">
+                    <h3>Jain Plain Dosa</h3>
+                    <p>Plain dosa prepared Jain style</p>
+                    <span class="price">RS 50</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://media.istockphoto.com/id/1306083166/photo/masala-sin.jpg?s=612x612&w=0&k=20&c=DLrNS6s3FS6Eygy0vbEk0WY0ROMuEyNde6ttwUv_ObA=" alt="Masala Dosa">
+                <div class="menu-item-content">
+                    <h3>Masala Dosa</h3>
+                    <p>Crispy dosa filled with spiced potato mixture</p>
+                    <span class="price">RS 70</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://d2s742iet3d3t1.cloudfront.net/menu_service/restaurants/49b54e81-ff3f-42d3-ace3-76a00a6ab12d/MenuItem/b457e0ff-43b7-466f-a168-5d0284fc214b.jpg?size=medium" alt="Onion Dosa">
+                <div class="menu-item-content">
+                    <h3>Onion Dosa</h3>
+                    <p>Dosa topped with sautéed onions</p>
+                    <span class="price">RS 80</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://i.ytimg.com/vi/HWcA_4SeMo0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDk9sRcwgn0BPmE9WX10HUVIQgwWg" alt="Butter Dosa">
+                <div class="menu-item-content">
+                    <h3>Butter Dosa</h3>
+                    <p>Dosa with a generous spread of butter</p>
+                    <span class="price">RS 100</span>
+                </div>
+            </div>
+            
+            <!-- <div class="menu-item" data-category="dosas">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/jain-butter-dosa.jpg" alt="Jain Butter Dosa">
+                <div class="menu-item-content">
+                    <h3>Jain Butter Dosa</h3>
+                    <p>Butter dosa prepared Jain style</p>
+                    <span class="price">RS 100</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/butter-onion-dosa.jpg" alt="Butter Onion Dosa">
+                <div class="menu-item-content">
+                    <h3>Butter Onion Dosa</h3>
+                    <p>Dosa with butter and sautéed onions</p>
+                    <span class="price">RS 100</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/paneer-dosa-recipe.jpg" alt="Paneer Dosa">
+                <div class="menu-item-content">
+                    <h3>Paneer Dosa</h3>
+                    <p>Dosa filled with spiced paneer mixture</p>
+                    <span class="price">RS 120</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/jain-paneer-dosa.jpg" alt="Jain Paneer Dosa">
+                <div class="menu-item-content">
+                    <h3>Jain Paneer Dosa</h3>
+                    <p>Paneer dosa prepared Jain style</p>
+                    <span class="price">RS 120</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/ghee-roast-dosa.jpg" alt="Ghee Kaaram Dosa">
+                <div class="menu-item-content">
+                    <h3>Ghee Kaaram Dosa</h3>
+                    <p>Spicy dosa roasted with ghee</p>
+                    <span class="price">RS 120</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/jain-ghee-roast.jpg" alt="Jain Ghee Kaaram Dosa">
+                <div class="menu-item-content">
+                    <h3>Jain Ghee Kaaram Dosa</h3>
+                    <p>Ghee kaaram dosa prepared Jain style</p>
+                    <span class="price">RS 120</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/cheese-dosa-recipe.jpg" alt="Cheese Dosa">
+                <div class="menu-item-content">
+                    <h3>Cheese Dosa</h3>
+                    <p>Dosa filled with melted cheese</p>
+                    <span class="price">RS 140</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/jain-cheese-dosa.jpg" alt="Jain Cheese Dosa">
+                <div class="menu-item-content">
+                    <h3>Jain Cheese Dosa</h3>
+                    <p>Cheese dosa prepared Jain style</p>
+                    <span class="price">RS 140</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/cheese-paneer-dosa.jpg" alt="Cheese Paneer Dosa">
+                <div class="menu-item-content">
+                    <h3>Cheese Paneer Dosa</h3>
+                    <p>Dosa with cheese and paneer filling</p>
+                    <span class="price">RS 140</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/jain-cheese-paneer-dosa.jpg" alt="Jain Cheese Paneer Dosa">
+                <div class="menu-item-content">
+                    <h3>Jain Cheese Paneer Dosa</h3>
+                    <p>Cheese paneer dosa prepared Jain style</p>
+                    <span class="price">RS 140</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/schezwan-dosa-recipe.jpg" alt="Schezwan Dosa">
+                <div class="menu-item-content">
+                    <h3>Schezwan Dosa</h3>
+                    <p>Dosa with spicy Schezwan sauce</p>
+                    <span class="price">RS 140</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/schezwan-cheese-dosa.jpg" alt="Schezwan Cheese Cream Dosa">
+                <div class="menu-item-content">
+                    <h3>Schezwan Cheese Cream Dosa</h3>
+                    <p>Schezwan dosa with cheese and cream</p>
+                    <span class="price">RS 150</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/mexican-dosa.jpg" alt="Mexican Dosa">
+                <div class="menu-item-content">
+                    <h3>Mexican Dosa</h3>
+                    <p>Fusion dosa with Mexican flavors</p>
+                    <span class="price">RS 150</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="dosas">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/special-dosa.jpg" alt="Deccan Special">
+                <div class="menu-item-content">
+                    <h3>Deccan Special</h3>
+                    <p>Our signature special dosa</p>
+                    <span class="price">RS 170</span>
+                </div>
+            </div>-->
+            
+            <!--  Mysore Bhajji Section --> 
+            <div class="menu-item" data-category="bhajji">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN8XzFUiYl0jCeYU_nyJFCTBSNHeYvDvlc2w&s" alt="Mysore Bhajji">
+                <div class="menu-item-content">
+                    <h3>Mysore Bhajji</h3>
+                    <p>Traditional South Indian fritters</p>
+                    <span class="price">RS 70</span>
+                </div>
+            </div>
+            <!--
+            <div class="menu-item" data-category="bhajji">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/tawa-mysore-bonda.jpg" alt="Tawa Mysore Bhajji">
+                <div class="menu-item-content">
+                    <h3>Tawa Mysore Bhajji</h3>
+                    <p>Mysore bhajji pan-fried on a tawa</p>
+                    <span class="price">RS 100</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="bhajji">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/07/mexican-mysore-bonda.jpg" alt="Mexican Mysore Bhajji">
+                <div class="menu-item-content">
+                    <h3>Mexican Mysore Bhajji</h3>
+                    <p>Fusion Mysore bhajji with Mexican flavors</p>
+                    <span class="price">RS 120</span>
+                </div>
+            </div>  -->
+            
+            <!-- Beverages Section -->
+            <div class="menu-item" data-category="beverages">
+                <img src="https://www.munatycooking.com/wp-content/uploads/2024/04/Three-glasses-filled-with-karak-chai-500x500.jpg" alt="Tea">
+                <div class="menu-item-content">
+                    <h3>Tea</h3>
+                    <p>Traditional Indian tea</p>
+                    <span class="price">RS 20</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="beverages">
+                <img src="https://southindianstore.com/wp-content/uploads/2015/12/filter-coffee-powder.jpg" alt="Filter Coffee">
+                <div class="menu-item-content">
+                    <h3>Filter Coffee</h3>
+                    <p>Traditional South Indian coffee</p>
+                    <span class="price">RS 30</span>
+                </div>
+            </div>
+            
+            <!-- <div class="menu-item" data-category="beverages">
+                <img src="https://images.unsplash.com/photo-1564419320461-6870880221ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" alt="Packaged Drinking Water">
+                <div class="menu-item-content">
+                    <h3>Packaged Drinking Water</h3>
+                    <p>Bottled mineral water</p>
+                    <span class="price">ON MRP</span>
+                </div>
+            </div> -->
+            
+            <div class="menu-item" data-category="beverages">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2020/10/FP/GL/OA/521830/soft-drinks.jpg" alt="Soft Drinks">
+                <div class="menu-item-content">
+                    <h3>Soft Drinks</h3>
+                    <p>Various carbonated beverages</p>
+                    <span class="price">ON MRP</span>
+                </div>
+            </div>
+            
+            <!-- Mocktails Section -->
+            <div class="menu-item" data-category="mocktails">
+                <img src="https://www.seriouseats.com/thmb/Lkr5DnY7jNP2aP5DS3d5qE0PEkQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2020__08__20200816-nimbu-soda-vicky-wasik-1-28079d5d45ee4e47a37a969d1e4834a0.jpg" alt="Fresh Lime Soda">
+                <div class="menu-item-content">
+                    <h3>Fresh Lime Soda</h3>
+                    <p>Refreshing lime soda with mint</p>
+                    <span class="price">RS 70</span>
+                </div>
+            </div>
+            
+            <!-- <div class="menu-item" data-category="mocktails">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/05/blue-lagoon-mocktail.jpg" alt="Blue Lagoon">
+                <div class="menu-item-content">
+                    <h3>Blue Lagoon</h3>
+                    <p>Blue curacao syrup with lemonade</p>
+                    <span class="price">RS 90</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="mocktails">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/05/virgin-mojito-recipe.jpg" alt="Virgin Mojito">
+                <div class="menu-item-content">
+                    <h3>Virgin Mojito</h3>
+                    <p>Mint, lime, and soda refresher</p>
+                    <span class="price">RS 90</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="mocktails">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/05/lemon-mojito-recipe.jpg" alt="Lemon Mojito">
+                <div class="menu-item-content">
+                    <h3>Lemon Mojito</h3>
+                    <p>Refreshing lemon and mint mojito</p>
+                    <span class="price">RS 90</span>
+                </div>
+            </div>
+            
+            <div class="menu-item" data-category="mocktails">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/05/rose-mocktail.jpg" alt="Rose Heaven Garden">
+                <div class="menu-item-content">
+                    <h3>Rose Heaven Garden</h3>
+                    <p>Rose syrup based refreshing mocktail</p>
+                    <span class="price">RS 90</span>
+                </div>
+            </div> -->
+        </div>
+        <button id="back-to-top" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>Founded in 2010, Deccan Dosa brings the authentic flavors of South Indian cuisine to your neighborhood. Our recipes have been passed down through generations, preserving the traditional taste while adding our own modern twist.</p>
+                <p>At Deccan Dosa, we believe in using only the freshest ingredients to create dishes that not only taste amazing but also nourish your body. Our chefs are trained in the art of South Indian cooking, ensuring that every dish that leaves our kitchen is perfect.</p>
+                <p>Whether you're a long-time fan of South Indian cuisine or trying it for the first time, we promise an unforgettable dining experience that will keep you coming back for more.</p>
+            </div>
+            <div class="about-image">
+                <!-- Original image commented out -->
+                <!-- <img src="restaurant.jpg" alt="Our Restaurant"> -->
+                <!-- Replace with a high-quality image from the internet -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo49qQnjydqF71jsMTEjbc_SGgcMy6RiHMPQ&s" alt="Our Restaurant">
+            </div>
+        </div>
+        
+        <div class="testimonials">
+            <h3>What Our Customers Say</h3>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"Best dosas in town! Authentic taste and great service."</p>
+                    <cite>- John Doe</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"The flavors transported me straight to South India. Absolutely delicious!"</p>
+                    <cite>- Sarah Johnson</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"I've been coming here for years and the quality has never dropped. Highly recommended!"</p>
+                    <cite>- Michael Chen</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>123 Dosa Lane, Food City</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone Number</h3>
+                            <p>(123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Address</h3>
+                            <p>info@deccandosa.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Opening Hours</h3>
+                            <p>Mon-Fri: 11:00 AM - 10:00 PM</p>
+                            <p>Sat-Sun: 10:00 AM - 11:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-yelp"></i></a>
+                </div>
+            </div>
+            
+            <form class="contact-form">
+                <h3>Send Us a Message</h3>
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+        
+        <div class="newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Stay updated with our latest offers and events</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        
+        <div id="map" class="google-map">
+            <!-- Google Maps will be inserted here via JavaScript -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60334.06848123008!2d72.76320734863279!3d19.06904460000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c92d83cd7be3%3A0xaf7f968f3e61e6e3!2sThe%20Deccan%20Dosa!5e0!3m2!1sen!2sin!4v1742189245315!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Opening Hours</h4>
+                <p>Monday - Friday: 11:00 AM - 10:00 PM</p>
+                <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="booking.html">Book a Table</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Dosa Lane, Food City</p>
+                <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> info@deccandosa.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Deccan Dosa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Google Maps API is no longer needed as we're using an iframe -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script> -->
+</body>
+</html>
